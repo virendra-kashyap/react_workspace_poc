@@ -19,7 +19,7 @@ const PresignedUrlGenerator = () => {
     try {
       // Step 1: Get presigned URLs + requestId
       const fileNames = files.map((file) => file.name);
-      const res = await fetch("http://localhost:8000/api/presigned-urls/", {
+      const res = await fetch("http://localhost:8000/api/get-presigned-urls/", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ files: fileNames }),
